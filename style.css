@@ -5,6 +5,11 @@
 *::after {
   box-sizing: border-box;
 }
+a {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
 html,
 body {
   height: 100%;
@@ -44,12 +49,11 @@ body {
 @media (max-width: 767px) {
   .container {
     max-width: none;
-  padding: 0 25px;
-
+    padding: 0 25px;
   }
-	.header{
-		padding: 30px 0px 0px 0px;
-	}
+  .header {
+    padding: 30px 0px 0px 0px;
+  }
   .header__content {
     display: flex;
     justify-content: center;
@@ -71,28 +75,37 @@ body {
     margin: 0 auto;
   }
   .block__row .block__element_2 {
-		padding: 0;
-		border: none;
+    padding: 0;
+    border: none;
     flex: 1 1 auto;
   }
-	.header .header__info{
-		text-align: center;
-		padding: 20px 10px;
-	}
-	.header__info .contacts {
-  font-size: 20px;
-  display: flex;
-	justify-content: center;
-	align-items: center;
-  gap: 10px 10px;
-  flex-wrap: wrap;
-}
-p, a{
-	font-size: 12px !important;
-}
+  .header .header__info {
+    text-align: center;
+    padding: 20px 10px;
+  }
+  .header__info .contacts {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 10px;
+    flex-wrap: wrap;
+  }
+  p,
+  a {
+    font-size: 12px !important;
+  }
 }
 
-
+@media (max-width: 400px) {
+  .container {
+    max-width: none;
+  }
+  .header .header__info .contacts {
+    justify-content: start;
+    padding: 20px 10px;
+  }
+}
 
 /* flex-контейнер */
 .block__row {
@@ -149,7 +162,9 @@ p, a{
   gap: 20px 40px;
   margin: 0px 0px 10px 0px;
   flex-wrap: wrap;
+  align-items: center;
 }
+
 .contacts a:hover {
   color: #fff;
   text-decoration: underline;
@@ -172,7 +187,7 @@ p, a{
 .aducation__title {
   display: flex;
   justify-content: space-between;
-	flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .aducation__title h5 {
   margin: 0px 0px 8px 0px;
